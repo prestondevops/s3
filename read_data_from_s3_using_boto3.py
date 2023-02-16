@@ -39,7 +39,7 @@ def upload_file(file_name, bucket, object_name=None):
 
 
 # Retrieve the list of existing buckets
-response = create_bucket('ashish-test-2020','us-west-2')
+response = create_bucket('lambda-test-2345-stan','us-west-2')
 print(response)
 
 # Retrieve the list of existing buckets
@@ -52,7 +52,7 @@ for bucket in response['Buckets']:
     print(f'  {bucket["Name"]}')
 
 # upload file to S3 bucket
-bucket = 'ashish-test-2020'
+bucket = 'lambda-test-2345-stan'
 key = 'data.json'
 with open('data.json', 'rb') as f:
     s3.upload_fileobj(f, bucket, key)
